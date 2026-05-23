@@ -1,0 +1,144 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #F3F1ED;
+  --background: #F3F1ED;
+  --card: #F7F5F2;
+  --primary: #1E1B18;
+  --secondary: #5E544C;
+  --accent: #D96B1D;
+  --border: #DED8D1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .grain-overlay {
+    animation: none;
+    opacity: 0.05;
+  }
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(217, 107, 29, 0.06), transparent 28%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.6), transparent 24%),
+    linear-gradient(180deg, #F7F5F2 0%, #F3F1ED 40%, #EFEAE6 100%);
+}
+
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(180deg, #F7F5F2 0%, #F3F1ED 50%, #EFEAE6 100%);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-sans antialiased;
+    position: relative;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-extra-bold tracking-tighter;
+  }
+
+  h1 {
+    @apply text-display;
+  }
+
+  h2 {
+    @apply text-heading;
+  }
+
+  h3 {
+    @apply text-subheading;
+  }
+}
+
+/* Grain texture effect */
+@layer utilities {
+  .grain-overlay {
+    @apply absolute inset-0 pointer-events-none opacity-[0.14] mix-blend-soft-light;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+    animation: grain 8s steps(10) infinite;
+  }
+
+  .aspect-16\/9 {
+    @apply aspect-video;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 border border-white/8 backdrop-blur-xl;
+  }
+}
+
+@keyframes grain {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-card rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent/60;
+}
+
+::selection {
+  background: rgba(217, 107, 29, 0.12);
+  color: #1E1B18;
+}
