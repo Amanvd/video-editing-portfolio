@@ -21,7 +21,7 @@ export default function About() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.35 }}
           >
-            <p className="max-w-2xl text-lg leading-9 text-primary md:text-xl">
+            <p className="max-w-2xl text-lg leading-9 text-foreground md:text-xl">
               I focus on rhythm, restraint, and emotional clarity. Every cut is built to feel deliberate, every motion cue is designed to support the story, and every frame is shaped to keep attention without overcrowding the screen.
             </p>
             <p className="mt-6 max-w-2xl text-base leading-8 text-secondary">

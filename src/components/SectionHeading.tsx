@@ -28,7 +28,7 @@ export default function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-heading font-display font-extra-bold text-primary">{title}</h2>
+      <h2 className="text-heading font-display font-extra-bold text-foreground">{title}</h2>
       {description ? (
         <p className="mt-5 max-w-2xl text-base leading-8 text-secondary md:text-lg">
           {description}

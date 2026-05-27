@@ -47,7 +47,7 @@ export default function Services() {
                     <Icon size={18} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-extra-bold text-primary">{service.title}</h3>
+                    <h3 className="text-xl font-display font-extra-bold text-foreground">{service.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-secondary">{service.description}</p>
                   </div>
                 </div>

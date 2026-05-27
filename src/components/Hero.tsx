@@ -39,7 +39,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="home" className="relative overflow-hidden bg-[#f5f1eb] pt-[20px]">
+    <section ref={sectionRef} id="home" className="relative overflow-hidden bg-background pt-[20px]">
       <div className="mx-auto flex min-h-[calc(100vh-7rem)] w-full max-w-[1500px] flex-col items-center justify-center px-4 pb-20 sm:px-6 md:px-8 md:pb-24 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -88,10 +88,10 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
           className="mx-auto mt-10 max-w-4xl text-center md:mt-12"
         >
-          <h1 className="text-balance text-[2.1rem] font-display font-extra-bold leading-[0.94] tracking-[-0.035em] text-black sm:text-[2.8rem] md:text-[3.7rem] lg:text-[4.5rem]">
+          <h1 className="text-balance text-[2.1rem] font-display font-extra-bold leading-[0.94] tracking-[-0.035em] text-foreground sm:text-[2.8rem] md:text-[3.7rem] lg:text-[4.5rem]">
             Crafting Motion That Keeps People Watching.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-black/72 sm:text-base md:text-lg md:leading-8">
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-foreground/72 sm:text-base md:text-lg md:leading-8">
             I create cinematic edits, motion graphics, and visual stories designed to hold attention and leave impact.
           </p>
         </motion.div>

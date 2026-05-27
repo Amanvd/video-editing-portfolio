@@ -43,7 +43,7 @@ export default function Contact() {
                   data-cursor-hover
                 >
                   <div>
-                    <p className="text-sm font-semibold text-primary">{link.label}</p>
+                    <p className="text-sm font-semibold text-foreground">{link.label}</p>
                     <p className="mt-2 text-xs uppercase tracking-[0.26em] text-secondary">Connect</p>
                   </div>
                   <Icon className="h-5 w-5 text-accent transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />

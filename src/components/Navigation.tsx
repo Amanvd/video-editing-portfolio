@@ -21,11 +21,11 @@ export default function Navigation() {
           className="group flex items-center gap-3"
           whileHover={{ x: 2 }}
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-[0.25em] text-primary transition-colors group-hover:border-accent/30 group-hover:text-accent">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-[0.25em] text-foreground transition-colors group-hover:border-accent/30 group-hover:text-accent">
             VE
           </span>
           <div>
-            <p className="text-sm font-semibold tracking-[0.24em] text-primary">YOUR NAME</p>
+            <p className="text-sm font-semibold tracking-[0.24em] text-foreground">YOUR NAME</p>
             <p className="text-[0.65rem] uppercase tracking-[0.32em] text-secondary">Cinematic portfolio</p>
           </div>
         </motion.a>
@@ -35,7 +35,7 @@ export default function Navigation() {
             <motion.a
               key={item.label}
               href={item.href}
-              className="text-[0.72rem] font-medium uppercase tracking-[0.28em] text-secondary transition-colors hover:text-primary"
+              className="text-[0.72rem] font-medium uppercase tracking-[0.28em] text-secondary transition-colors hover:text-foreground"
               whileHover={{ y: -1 }}
               data-cursor-hover
             >
@@ -44,7 +44,7 @@ export default function Navigation() {
           ))}
           <motion.a
             href="#work"
-            className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-primary transition-all hover:border-accent/40 hover:bg-accent/10 hover:text-primary"
+            className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-foreground transition-all hover:border-accent/40 hover:bg-accent/10 hover:text-foreground"
             whileHover={{ y: -1 }}
             data-cursor-hover
           >
@@ -54,7 +54,7 @@ export default function Navigation() {
 
         <motion.button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-primary lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground lg:hidden"
           onClick={() => setIsOpen((value) => !value)}
           whileTap={{ scale: 0.95 }}
           aria-label="Toggle navigation menu"
@@ -97,7 +97,7 @@ export default function Navigation() {
                 <motion.a
                   key={item.label}
                   href={item.href}
-                  className="rounded-2xl border border-white/8 bg-white/5 px-4 py-4 text-[0.75rem] font-medium uppercase tracking-[0.3em] text-primary"
+                  className="rounded-2xl border border-white/8 bg-white/5 px-4 py-4 text-[0.75rem] font-medium uppercase tracking-[0.3em] text-foreground"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}

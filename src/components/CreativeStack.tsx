@@ -54,7 +54,7 @@ export default function CreativeStack() {
                     <Icon size={28} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-extra-bold text-primary">{tool.name}</h3>
+                    <h3 className="text-xl font-display font-extra-bold text-foreground">{tool.name}</h3>
                     <p className="mt-3 text-sm leading-7 text-secondary">{tool.description}</p>
                   </div>
                 </div>
