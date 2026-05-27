@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://amanedits.vercel.app
+
+# Sitemaps
+Sitemap: https://amanedits.vercel.app/sitemap.xml

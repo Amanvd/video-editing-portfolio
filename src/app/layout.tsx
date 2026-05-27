@@ -1,25 +1,27 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://amanedits.vercel.app';
+const canonicalUrl = new URL('/', siteUrl).toString();
+const openGraphImageUrl = new URL('/opengraph-image', siteUrl).toString();
 
 export const metadata: Metadata = {
   title: 'Cinematic Video Editor Portfolio',
   description: 'A cinematic portfolio for a video editor and motion designer.',
   metadataBase: new URL(siteUrl),
   alternates: {
-    canonical: '/',
+    canonical: canonicalUrl,
   },
   openGraph: {
     title: 'Cinematic Video Editor Portfolio',
     description: 'A cinematic portfolio for a video editor and motion designer.',
-    url: '/',
+    url: canonicalUrl,
     siteName: 'Cinematic Video Editor Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/opengraph-image',
+        url: openGraphImageUrl,
         width: 1200,
         height: 630,
         alt: 'Cinematic Video Editor Portfolio',
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Cinematic Video Editor Portfolio',
     description: 'A cinematic portfolio for a video editor and motion designer.',
-    images: ['/opengraph-image'],
+    images: [openGraphImageUrl],
   },
   icons: {
     icon: '/icon.svg',
